@@ -1,0 +1,348 @@
+.booking-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.booking-header {
+  text-align: center;
+  padding: 40px 24px;
+  background-color: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.booking-header h2 {
+  font-size: 28px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.booking-header p {
+  color: var(--text-secondary);
+}
+
+.booking-stepper {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  flex: 1;
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 12px;
+  transition: all var(--transition-fast);
+}
+
+.step.active .step-number {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  box-shadow: 0 0 10px rgba(212, 107, 56, 0.2);
+}
+
+.step.completed .step-number {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+.step-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.step.active .step-label {
+  color: var(--text-primary);
+}
+
+.step-line {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--border-color);
+  z-index: -1;
+}
+
+.step.completed .step-line {
+  background-color: var(--accent-primary);
+}
+
+.booking-content {
+  padding: 0 32px 40px;
+}
+
+.booking-content h3 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.btn-back {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.btn-back:hover {
+  color: var(--text-primary);
+}
+
+/* Service Options */
+.service-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.service-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background-color: var(--bg-tertiary);
+}
+
+.service-option:hover {
+  border-color: var(--accent-primary);
+}
+
+.service-option.selected {
+  border-color: var(--accent-primary);
+  background-color: rgba(212, 107, 56, 0.05);
+}
+
+.option-info h4 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.option-info p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.option-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Date and Time Selector */
+.date-selector, .time-selector {
+  margin-bottom: 32px;
+}
+
+.date-selector h4, .time-selector h4 {
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.date-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+
+.date-chip {
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background-color: var(--bg-tertiary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.date-chip:hover {
+  border-color: var(--accent-primary);
+}
+
+.date-chip.selected {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--bg-primary);
+  box-shadow: 0 4px 10px rgba(212, 107, 56, 0.2);
+}
+
+.date-day {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.date-num {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.date-month {
+  font-size: 12px;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.time-slot {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background-color: var(--bg-tertiary);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.time-slot:hover {
+  border-color: var(--accent-primary);
+}
+
+.time-slot.selected {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--bg-primary);
+  box-shadow: 0 4px 10px rgba(212, 107, 56, 0.2);
+}
+
+/* Forms */
+.summary-box {
+  background-color: rgba(212, 107, 56, 0.05);
+  border-left: 4px solid var(--accent-primary);
+  padding: 16px 24px;
+  margin-bottom: 32px;
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+}
+
+.details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(212, 107, 56, 0.1);
+}
+
+.btn-full {
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px;
+  font-size: 16px;
+}
+
+/* Success Step */
+.step-done {
+  padding: 40px 0;
+}
+
+.success-icon {
+  color: var(--success-color);
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.step-done h3 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.step-done p {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.step-done p strong {
+  color: var(--text-primary);
+}
+
+.step-done .note {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+@media (max-width: 600px) {
+  .step-label {
+    display: none;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+}

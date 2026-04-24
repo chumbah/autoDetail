@@ -1,0 +1,116 @@
+.services-section {
+  padding: 100px 0;
+  background-color: var(--bg-primary);
+}
+
+.section-header {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 18px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(70, 60, 50, 0.15);
+  border-color: var(--accent-primary);
+}
+
+.service-img-wrapper {
+  position: relative;
+  height: 220px;
+}
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-price {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
+  font-weight: 800;
+  font-size: 20px;
+  padding: 8px 16px;
+  border-radius: var(--border-radius-full);
+  box-shadow: 0 4px 10px rgba(212, 107, 56, 0.3);
+}
+
+.service-content {
+  padding: 32px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-content h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.service-duration {
+  font-size: 14px;
+  color: var(--accent-primary);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.service-desc {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.service-features {
+  margin-top: auto;
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  font-size: 15px;
+}
+
+.feature-icon {
+  color: var(--accent-primary);
+}
